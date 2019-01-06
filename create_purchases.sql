@@ -1,7 +1,7 @@
 USE [cars]
 GO
 
-/****** Object:  Table [dbo].[purchases]    Script Date: 01.01.2019 15:05:41 ******/
+/****** Object:  Table [dbo].[purchases]    Script Date: 06.01.2019 20:18:18 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -12,8 +12,8 @@ CREATE TABLE [dbo].[purchases](
 	[purchase_id] [int] NOT NULL,
 	[client_id] [int] NULL,
 	[car_id] [int] NULL,
-	[created_datetime] [timestamp] NOT NULL,
 	[price] [bigint] NULL,
+	[purchase_date] [date] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[purchase_id] ASC
@@ -31,4 +31,3 @@ GO
 
 ALTER TABLE [dbo].[purchases] CHECK CONSTRAINT [FK_purchase_car]
 GO
-
